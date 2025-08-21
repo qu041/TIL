@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.5s;
+        }
+        
+        
+        #box01 {
+            background-color: pink;
+            border: 1px solid black;
+            width:500px;
+            height: 500px;
+
+        }
+        #box02 {
+            background-color: gold;
+            border: 1px solid black;
+            width: 450px;
+            height: 450px;
+        }
+        #box03 {
+            background-color: skyblue;
+            border: 1px solid black;
+            width: 400px;
+            height: 400px;
+        }
+        #box04 {
+            background-color: lightgreen;
+            border: 1px solid black;
+            width: 350px;
+            height: 350px;
+        }
+        #box05 {
+            background-color: lightcoral;
+            border: 1px solid black;
+            width: 300px;
+            height: 300px;
+        }
+        #box06 {
+            background-color: lightgray;
+            border: 1px solid black;
+            width: 250px;
+            height: 250px;
+        }
+
+        #box01:hover  .box {
+            border-radius: 10%;
+        }
+        #box02:hover  .box {
+            border-radius: 20%;
+        }
+        #box03:hover  .box {
+            border-radius: 30%;
+        }
+        #box04:hover  .box {
+            border-radius: 40%;
+        }
+        #box05:hover  .box {
+            border-radius: 50%;
+        }
+        #box06:hover  .box {
+            border-radius: 60%;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- p09_radius -->
+    <!-- div#box01.box>div#box02.box>div#box03.box>div#box04.box>div#box05.box>div#box06.box -->
+    <div id="box01" class="box">
+        <div id="box02" class="box">
+            <div id="box03" class="box">
+                <div id="box04" class="box">
+                    <div id="box05" class="box">
+                        <div id="box06" class="box"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

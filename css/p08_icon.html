@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        
+        #list {
+            width:680px;
+            margin:30px auto;
+            display: flex;
+            flex-wrap:wrap;
+            gap:0px;
+            /* overflow: hidden; */
+            
+        }
+
+        .box {
+            border: 10px solid black;
+            width:100px; height: 100px;
+            margin:3px 0px;
+            float: left;
+            overflow: hidden;
+        }
+
+        .box img {
+            width: 100%;
+            height: 100%;
+            /* overflow: hidden; */
+        }
+
+        #list1 .box img {
+            opacity:0;
+            transform: translate(-126px,0px);
+            transition: .5s all;
+            /* overflow: hidden; */
+            
+        }
+
+        #list1 .box:hover img{
+            opacity:1;
+            transform: translate(0,0);
+        }
+
+        #list2 .box img {
+            opacity:0;
+            transition: .5s all;
+            
+        }
+
+        #list2 .box:hover img{
+            opacity:1;
+        }
+
+        #list3 .box img {
+            opacity:0;
+            transition: .5s all;
+            transform: scale(0,0);
+            
+        }
+
+        #list3 .box:hover img{
+            opacity:1;
+            transform: scale(1,1);
+        }
+
+        #list4 .box img {
+            opacity:0;
+            transition: .5s all;
+            transform: translate(0,-126px) scale(0,0) rotate(0deg)
+
+            
+        }
+
+        #list4 .box:hover img{
+            opacity:1;
+            transform: translate(0,0px) scale(1,1) rotate(360deg)
+        }
+
+        #list1 .box:nth-child(n+2):nth-child(-n+4),
+        #list2 .box:nth-child(n+2):nth-child(-n+4),
+        #list3 .box:nth-child(n+2):nth-child(-n+4),
+        #list4 .box:nth-child(n+2):nth-child(-n+4) {
+            border-left: none;
+        }
+        #list1 .box:nth-child(4),
+        #list2 .box:nth-child(4),
+        #list3 .box:nth-child(4),
+        #list4 .box:nth-child(4) {
+            border-right: none;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- p08_icon.html -->
+    <!-- div.list$[div.box$$.box*5]*4 -->
+    <div id="list">
+    <div id="list1">
+     <div id="box01" class="box"><img src="../images/rect_icon01.png"></div>
+     <div id="box02" class="box"><img src="../images/rect_icon02.png"></div>
+     <div id="box03" class="box"><img src="../images/rect_icon03.png"></div>
+     <div id="box04" class="box"><img src="../images/rect_icon04.png"></div>
+     <div id="box05" class="box"><img src="../images/rect_icon05.png"></div>
+    </div>
+     <div id="list2"> 
+        <div id="box06" class="box"><img src="../images/rect_icon01.png"></div>
+        <div id="box07" class="box"><img src="../images/rect_icon02.png"></div>
+        <div id="box08" class="box"><img src="../images/rect_icon03.png"></div>
+        <div id="box09" class="box"><img src="../images/rect_icon04.png"></div>
+        <div id="box10" class="box"><img src="../images/rect_icon05.png"></div>
+    </div>
+    <div id="list3">
+        <div id="box11" class="box"><img src="../images/rect_icon01.png"></div>
+        <div id="box12" class="box"><img src="../images/rect_icon02.png"></div>
+        <div id="box13" class="box"><img src="../images/rect_icon03.png"></div>
+        <div id="box14" class="box"><img src="../images/rect_icon04.png"></div>
+        <div id="box15" class="box"><img src="../images/rect_icon05.png"></div>
+    </div>
+     <div id="list4">
+        <div id="box16" class="box"><img src="../images/rect_icon01.png"></div>
+        <div id="box17" class="box"><img src="../images/rect_icon02.png"></div>
+        <div id="box18" class="box"><img src="../images/rect_icon03.png"></div>
+        <div id="box19" class="box"><img src="../images/rect_icon04.png"></div>
+        <div id="box20" class="box"><img src="../images/rect_icon05.png"></div>
+            </div>
+        </div>
+</div>
+
+</body>
+</html>
