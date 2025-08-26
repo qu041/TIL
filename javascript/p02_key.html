@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        h1, div {
+            text-align: center;
+            color: gray;
+        }
+
+        #group {
+            width: 200px;
+            text-align: left;
+            margin: 0 auto;
+        }
+
+        #btnPass {
+            width: 200px;
+            border: none;
+            text-align: left;
+            margin: 10px auto;
+            color: red;
+            font-weight: bold;
+
+        }
+
+        
+    </style>
+</head>
+<body onload="m1()">
+    <!-- p02_key.html -->
+     <h1>회원 가입</h1>
+     <div id="group">
+     <label for="id">아이디:</label>
+     <input type="text" value="" name="btnID">
+    </div>
+    <div><input type="text" value="" name="btnPass" id="btnPass" readonly></div>
+
+    <script>
+        var btnID,btnPass;
+
+        function m1() {
+            btnID = document.all.btnID;
+            btnPass = document.all.btnPass;
+            btnID.onkeyup = valid;
+        }
+
+        function valid() {
+            if (btnID.value.length == 0) {
+                btnPass.value = '';
+            } else if (btnID.value.length < 4) {
+                btnPass.value = '아이디가 너무 짧습니다.';
+            } else if (btnID.value.length > 12) {
+                btnPass.value = '아이디가 너무 깁니다.';
+            } else {
+                btnPass.value = '아이디가 적합합니다.';
+            }          
+        }
+        
+
+
+
+
+    </script>
+</body>
+</html>

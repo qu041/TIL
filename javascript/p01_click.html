@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            color: gray;
+        }
+
+        #btn {
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <!-- p01_click.html -->
+    <h1>데이터 입력</h1>
+    <div id="data">
+    <div>
+        이름 : <input type="text" name="name" id="name">
+    </div>
+    <div>
+        나이 : <input type="text" name="age" id="age">
+    </div>
+    <div>
+        별명 : <input type="text" name="nickname" id="nickname">
+    </div>
+    </div>
+
+    <div id="btn">
+        <input type="button" value="Long" name="btnLong">
+        <input type="button" value="Short" name="btnShort">
+    </div>
+
+    <script>
+        document.all.btnLong.onclick = m1;
+        document.all.btnShort.onclick = m2;
+
+        function m1() {
+            document.all.name.style.width = (document.all.name.offsetWidth * 2) + 'px';
+            document.all.age.style.width = (document.all.age.offsetWidth * 2) + 'px';
+            document.all.nickname.style.width = (document.all.nickname.offsetWidth * 2) + 'px';
+        }
+
+        function m2() {
+            document.all.name.style.width = (document.all.name.offsetWidth / 2) + 'px';
+            document.all.age.style.width = (document.all.age.offsetWidth / 2) + 'px';
+            document.all.nickname.style.width = (document.all.nickname.offsetWidth / 2) + 'px';
+        }
+
+    </script>
+
+</body>
+</html>
