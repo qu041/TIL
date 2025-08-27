@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        div {
+            border: 1px solid #999;
+            padding:3px;
+            min-height: 146px;
+            margin-bottom:3px;
+        }
+
+
+    </style>
+</head>
+<body>1
+    <!-- p20_dom.html -->
+     <div name="num" id="num">
+        <!-- <img src="../images/1.png"> -->
+
+     </div>
+     <div name="num" id="num1"></div>
+
+     <script>
+        var place =document.getElementById("num")
+
+        window.addEventListener("keydown",function(e) {
+            if(e.key >= "0" && e.key <="9") {
+                place.innerHTML += "<img src='../images/" + e.key +".png'>";
+            }
+        })
+1
+        var place1 =document.getElementById("num1")
+
+        window.addEventListener("keydown",function(e) {
+            if(e.key >= "0" && e.key <="9") {
+                place1.innerHTML += "<img src='../images/" + e.key +".png'>";
+            }
+        })
+
+
+     </script>
+
+</body>
+</html>

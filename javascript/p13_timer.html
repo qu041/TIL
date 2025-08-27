@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            background-Color: white;
+        }
+        
+        #num {
+            color: black;
+            text-align:center;
+            font-size:10em;
+            font-weight:bold;
+            width:250px;
+            /* height:100px; */
+            border:0px;
+            margin:100px auto;
+            /* padding: 30px 30px; */
+            display:block;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <!-- p13_timer.html -->
+    <div>
+        <input type="text" name="num" id="num" value="10" readonly>
+    </div>
+    <script>
+        var n =10;
+        var timer =setInterval(function() {
+            n--;
+            document.all.num.value=n;
+            
+            if (n==0) {
+                clearInterval(timer);
+                location.href = "https://google.com";
+            }
+        }, 1000);
+
+        window.onkeydown = function(e) {
+            if (e.code == 'Escape') {
+                clearInterval(timer);
+                document.body.style.backgroundColor = "tomato";
+            }
+        };
+
+
+    </script>
+
+</body>
+</html>
