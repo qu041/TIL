@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        #box1 {
+            display: none;
+        }
+
+        .item {
+            position: absolute;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <!--p29_style.html  -->
+    <h1>마우스 클릭으로 이모지 삽입</h1>
+
+
+    <!-- <script src="js/jquery-3.7.1.js"></script> -->
+    <script>
+        var item;
+
+        window.onload = function() {
+
+            window.onmousedown = function(e) {
+
+            img = document.createElement("img");
+
+            img.setAttribute("class", "item");
+            img.setAttribute("src", "../images/m01.png");
+
+            img.style['left'] = (e.clientX - 64) +'px';
+            img.style['top'] = (e.clientY - 64) +'px';
+
+            document.body.appendChild(img);
+
+        }
+        };
+
+
+
+
+
+    </script>
+</body>
+</html>
